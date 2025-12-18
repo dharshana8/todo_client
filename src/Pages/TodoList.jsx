@@ -11,7 +11,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SaveIcon from '@mui/icons-material/Save';
 import CloseIcon from '@mui/icons-material/Close';
-import "./css/TodoList.css"
+import "./css/ToDoList.css"
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
@@ -133,7 +133,7 @@ const TodoList = () => {
         <TextField fullWidth label="Add Todo" id="fullWidth" value={todo} onChange={(e) => setTodo(e.target.value)} />
         <Button
           variant="contained"
-          color="button"
+          color="primary"
           className='button'
           onClick={postTodo}
           disabled={loading || !todo.trim()}
@@ -208,7 +208,7 @@ const TodoList = () => {
                 {editId === res._id ? (
                   <div className="edit-row">
                     <TextField value={editTodo} onChange={(e) => setEditTodo(e.target.value)} size="small" />
-                    <Button onClick={handleUpdate} disabled={updateLoading} style={{ marginLeft: '8px' }} variant="contained" color="button">
+                    <Button onClick={handleUpdate} disabled={updateLoading} style={{ marginLeft: '8px' }} variant="contained" color="primary">
                       {updateLoading ? <CircularProgress size={18} color="inherit" /> : <SaveIcon />}
                     </Button>
                     <Button onClick={cancelEdit} style={{ marginLeft: '8px' }} variant="outlined" color="inherit"><CloseIcon /></Button>

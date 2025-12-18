@@ -1,4 +1,4 @@
-                                                                                                                                                                                                                                                       .tasklist {
+                                                                                                                                                                                                                                                       .todolist {
     margin: auto;
     display: flex;
     flex-direction: column;  
@@ -9,7 +9,7 @@
     padding-top: 60px;          
 }
 
-.taskList h1 {
+.todolist h1 {
     color: black;
     font-size: 3rem;
     margin-bottom: 40px;      
